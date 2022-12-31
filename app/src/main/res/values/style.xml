@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="MyBtnStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/btn_bg_selector</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="MyEditStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="footButton" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="android:textColorSecondary">@color/gray_4</item>
+        <!-- 修改标题栏为白色 ,注意后面版本号设置-->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <!-- 修改标题栏字体为黑色 -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:textColor">@color/purple_200</item><!--toolbar标题字体颜色-->
+
+    </style>
+
+    <!-- 修改tablayout的背景色，提示线的颜色，字体颜色等-->
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@android:color/white</item>
+        <item name="tabIndicatorColor">@color/purple_200</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">#673AB7</item>
+    </style>
+
+    <style name="TextAppearance.Design.Tab" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_4</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--popmenu的样式-->
+    <style name="PopupMenuBgStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+    <style name="PopupMenuTextStyle">
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="PopupMenuDivier">
+        <item name="android:divider">@color/gray_2</item>
+        <item name="android:dividerHeight">0.5dp</item>
+    </style>
+
+    <style name="MyEditText">
+        <item name="colorControlNormal">@color/gray_4</item>
+        <item name="colorControlActivated"> @color/gray_2</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    </resources>

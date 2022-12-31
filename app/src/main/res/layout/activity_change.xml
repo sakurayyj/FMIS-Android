@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zsgc.ChangeActivity"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/change_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_2"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="10dp">
+            <Button
+                android:id="@+id/change_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/gray_3"
+                android:textSize="30sp"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:text="&#060;"/>
+
+
+            <TextView
+                android:id="@+id/tv_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="修改数据"
+                android:textColor="@color/gray_3"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/change_queren"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/gray_3"
+                android:textSize="25sp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:background="@color/transparent"
+                android:text="√"/>
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/change_cardview"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/change_toolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:text="  请选择要修改的数据年份:"
+            android:textSize="17sp"
+            android:gravity="left|center"
+            android:textColor="@color/gray_3"
+            android:background="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/change_choose_year"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/gray_3"
+        android:textSize="16sp"
+        android:backgroundTint="@color/gray_2"
+        app:textTint="@color/black"
+        android:text="2002"
+        app:arrowTint="@color/black"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/change_cardview"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/change_cardview2"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/change_choose_year"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:text="  请选择要修改的数据:"
+            android:textSize="17sp"
+            android:gravity="left|center"
+            android:textColor="@color/gray_3"
+            android:background="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/change_choose_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/gray_3"
+        android:textSize="16sp"
+        android:backgroundTint="@color/gray_2"
+        app:textTint="@color/black"
+        android:text="社会从业人员"
+        app:arrowTint="@color/black"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/change_cardview2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintTop_toBottomOf="@id/change_choose_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#ffffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="40dp"
+                android:id="@+id/xiugaiqian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/before_change"
+                android:text="修改前："
+                android:textSize="17dp"
+                android:textColor="@color/gray_3">
+
+            </TextView>
+            <TextView
+                android:id="@+id/before_change"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/xiugaiqian"
+                app:layout_constraintBottom_toBottomOf="@+id/xiugaiqian"
+                app:layout_constraintLeft_toRightOf="@+id/xiugaiqian"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="17dp"
+                android:textColor="@color/gray_3">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginLeft="1dp"
+                android:layout_width="160dp"
+                android:layout_height="1dp"
+                android:background="@color/gray_3"
+                app:layout_constraintTop_toBottomOf="@+id/before_change"
+                app:layout_constraintLeft_toLeftOf="@id/before_change"
+                app:layout_constraintRight_toRightOf="@id/before_change">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/xiugaihou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@id/xiugaiqian"
+                android:text="修改后："
+                android:textSize="17dp"
+                android:textColor="@color/gray_3"
+                app:layout_constraintLeft_toLeftOf="@id/xiugaiqian">
+
+            </TextView>
+            <EditText
+                android:id="@+id/after_change"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/xiugaihou"
+                app:layout_constraintBottom_toBottomOf="@+id/xiugaihou"
+                app:layout_constraintLeft_toRightOf="@+id/xiugaihou"
+                app:layout_constraintRight_toRightOf="parent"
+                android:theme="@style/MyEditText"
+                android:textColor="@color/gray_3">
+
+            </EditText>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_show_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <com.example.fmis.util.NestedScrollableHost
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+                <androidx.cardview.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="4dp">
+
+                    <com.example.fmis.util.MyBanner
+                        android:id="@+id/mBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"/>
+                </androidx.cardview.widget.CardView>
+
+            </com.example.fmis.util.NestedScrollableHost>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/i_congye"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/congye"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/i_gongzi">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_congye"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="社会从业人数"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_congye"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_congye"
+                    app:layout_constraintRight_toRightOf="@id/i_congye">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_gongzi"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/gongzi"
+                    app:layout_constraintTop_toTopOf="@id/i_congye"
+                    app:layout_constraintLeft_toRightOf="@id/i_congye"
+                    app:layout_constraintRight_toLeftOf="@id/i_lingshou">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_gongzi"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="在岗职工工资总额"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_gongzi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_gongzi"
+                    app:layout_constraintRight_toRightOf="@id/i_gongzi">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_lingshou"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/lingshou"
+                    app:layout_constraintTop_toTopOf="@id/i_gongzi"
+                    app:layout_constraintLeft_toRightOf="@id/i_gongzi"
+                    app:layout_constraintRight_toLeftOf="@id/i_kezhipei">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_lingshou"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="社会消费品零售总额"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_lingshou"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_lingshou"
+                    app:layout_constraintRight_toRightOf="@id/i_lingshou">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_kezhipei"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kezhipei"
+                    app:layout_constraintTop_toTopOf="@id/i_lingshou"
+                    app:layout_constraintLeft_toRightOf="@id/i_lingshou"
+                    app:layout_constraintRight_toRightOf="parent">
+
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_kezhipei"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="城镇居民人均可支配收入"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_kezhipei"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_kezhipei"
+                    app:layout_constraintRight_toRightOf="@id/i_kezhipei">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/i_zhichu"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/zhichu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/i_renkou">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_zhichu"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="城镇居民人均消费性支出"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_zhichu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_zhichu"
+                    app:layout_constraintRight_toRightOf="@id/i_zhichu">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_renkou"
+                    android:layout_width="34dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/renkou"
+                    app:layout_constraintTop_toTopOf="@id/i_zhichu"
+                    app:layout_constraintLeft_toRightOf="@id/i_zhichu"
+                    app:layout_constraintRight_toLeftOf="@id/i_touzi">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_renkou"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="年末总人口"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_renkou"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_renkou"
+                    app:layout_constraintRight_toRightOf="@id/i_renkou">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_touzi"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/touzi"
+                    app:layout_constraintTop_toTopOf="@id/i_renkou"
+                    app:layout_constraintLeft_toRightOf="@id/i_renkou"
+                    app:layout_constraintRight_toLeftOf="@id/i_shengchanzongzhi">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_touzi"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="全社会固定资产投资额"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_touzi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_touzi"
+                    app:layout_constraintRight_toRightOf="@id/i_touzi">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_shengchanzongzhi"
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shengchanzongzhi"
+                    app:layout_constraintTop_toTopOf="@id/i_touzi"
+                    app:layout_constraintLeft_toRightOf="@id/i_touzi"
+                    app:layout_constraintRight_toRightOf="parent">
+
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_shengchanzongzhi"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="地区生产总值"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_shengchanzongzhi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_shengchanzongzhi"
+                    app:layout_constraintRight_toRightOf="@id/i_shengchanzongzhi">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/i_diyichanye"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/diyichanye"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/i_shuishou">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_diyichanye"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="第一产业产值"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_diyichanye"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_diyichanye"
+                    app:layout_constraintRight_toRightOf="@id/i_diyichanye">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_shuishou"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shuishou"
+                    app:layout_constraintTop_toTopOf="@id/i_diyichanye"
+                    app:layout_constraintLeft_toRightOf="@id/i_diyichanye"
+                    app:layout_constraintRight_toLeftOf="@id/i_jiagezhishu">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_shuishou"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="税收"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_shuishou"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_shuishou"
+                    app:layout_constraintRight_toRightOf="@id/i_shuishou">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_jiagezhishu"
+                    android:layout_width="32dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/jiagezhishu"
+                    app:layout_constraintTop_toTopOf="@id/i_shuishou"
+                    app:layout_constraintLeft_toRightOf="@id/i_shuishou"
+                    app:layout_constraintRight_toLeftOf="@id/i_chanzhibi">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_jiagezhishu"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="居民消费价格指数"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_jiagezhishu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_jiagezhishu"
+                    app:layout_constraintRight_toRightOf="@id/i_jiagezhishu">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_chanzhibi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/chanzhibi"
+                    app:layout_constraintTop_toTopOf="@id/i_jiagezhishu"
+                    app:layout_constraintLeft_toRightOf="@id/i_jiagezhishu"
+                    app:layout_constraintRight_toRightOf="parent">
+
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_chanzhibi"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="第三产业与第二产业产值比"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_chanzhibi"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_chanzhibi"
+                    app:layout_constraintRight_toRightOf="@id/i_chanzhibi">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/i_xiaofeishuiping"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/xiaofeishuiping"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/i_caizhengshouru">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_xiaofeishuiping"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="居民消费水平"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_xiaofeishuiping"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_xiaofeishuiping"
+                    app:layout_constraintRight_toRightOf="@id/i_xiaofeishuiping">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/i_caizhengshouru"
+                    android:layout_width="37dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/caizhengshouru"
+                    app:layout_constraintTop_toTopOf="@id/i_xiaofeishuiping"
+                    app:layout_constraintLeft_toRightOf="@id/i_xiaofeishuiping"
+                    app:layout_constraintRight_toLeftOf="@id/blank1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/t_caizhengshouru"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="财政收入"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/i_caizhengshouru"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/i_caizhengshouru"
+                    app:layout_constraintRight_toRightOf="@id/i_caizhengshouru">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/blank1"
+                    android:layout_width="32dp"
+                    android:layout_height="33dp"
+                    app:layout_constraintTop_toTopOf="@id/i_caizhengshouru"
+                    app:layout_constraintLeft_toRightOf="@id/i_caizhengshouru"
+                    app:layout_constraintRight_toLeftOf="@id/blank2">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/blank2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintTop_toTopOf="@id/blank1"
+                    app:layout_constraintLeft_toRightOf="@id/blank1"
+                    app:layout_constraintRight_toRightOf="parent">
+
+
+                </ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</LinearLayout>

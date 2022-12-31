@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zsgc.DeleteActivity"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/delete_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/delete_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_3"
+            android:textSize="30sp"
+            android:background="@color/transparent"
+            android:text="&#060;"/>
+
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="删除数据"
+            android:textColor="@color/gray_3"
+            android:textSize="20sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/delete_cardview"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/delete_toolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:text="  请选择要删除的数据年份:"
+            android:textSize="17sp"
+            android:gravity="left|center"
+            android:textColor="@color/gray_3"
+            android:background="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
+    <org.angmarch.views.NiceSpinner
+        android:id="@+id/delete_choose_year"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/gray_3"
+        android:textSize="16sp"
+        android:backgroundTint="@color/gray_2"
+        app:textTint="@color/black"
+        android:text="2002"
+        app:arrowTint="@color/black"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/delete_cardview"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:id="@+id/delete_button1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delete_choose_year"
+        android:background="@drawable/background1"
+        android:text="删除"
+        android:textColor="@color/gray_3"
+        android:textSize="17dp"
+        android:layout_margin="20dp">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

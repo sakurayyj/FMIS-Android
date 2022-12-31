@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.财务管理系统" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!--popupmenu样式-->
+        <item name="popupMenuStyle">@style/PopupMenuBgStyle</item>
+        <item name="textAppearanceSmallPopupMenu">@style/PopupMenuTextStyle</item>
+        <item name="textAppearanceLargePopupMenu">@style/PopupMenuTextStyle</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuDivier</item>
+    </style>
+    <style name="mainStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:popupMenuStyle">@style/popmenuStyle</item>
+        <item name="android:dropDownListViewStyle">@style/popmenuDivier</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/popmeuText</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/popmeuText</item>
+    </style>
+    <!--popMenu的Style-->
+    <style name="popmenuStyle" >
+        <item name="android:popupBackground">@color/white</item><!-- popMenu的背景色-->
+    </style>
+    <!--popmenu的字体颜色-->
+    <style name="popmeuText">
+        <item name="android:textColor">@color/gray_3</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--popMenu分割线的颜色-->
+    <style name="popmenuDivier">
+        <item name="android:divider">@color/gray_2</item>
+        <item name="android:dividerHeight">2sp</item>
+    </style>
+</resources>

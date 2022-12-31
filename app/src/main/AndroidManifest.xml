@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fmis">
+    <!-- 添加网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".information.DuoBianLiang3Activity"></activity>
+        <activity android:name=".information.DuoBianLiang2Activity" />
+        <activity android:name=".information.DuoBianLiang1Activity" />
+        <activity android:name=".information.XiangGuanXingActivity" >
+
+        </activity>
+        <activity android:name=".information.YActivity" />
+        <activity android:name=".information.X13Activity" />
+        <activity android:name=".information.X12Activity" />
+        <activity android:name=".information.X11Activity" />
+        <activity android:name=".information.X10Activity" />
+        <activity android:name=".information.X9Activity" />
+        <activity android:name=".information.X8Activity" />
+        <activity android:name=".information.X7Activity" />
+        <activity android:name=".information.X6Activity" />
+        <activity android:name=".information.X5Activity" />
+        <activity android:name=".information.X4Activity" />
+        <activity android:name=".information.X3Activity" />
+        <activity android:name=".information.X2Activity" />
+        <activity android:name=".zsgc.SearchActivity" />
+        <activity android:name=".zsgc.DeleteActivity" />
+        <activity android:name=".zsgc.ChangeActivity" />
+        <activity android:name=".zsgc.AddActivity" />
+        <activity android:name=".information.X1Activity" />
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LoginUpActivity" />
+        <activity android:name=".activity.MainActivity" >
+
+        </activity>
+    </application>
+
+</manifest>

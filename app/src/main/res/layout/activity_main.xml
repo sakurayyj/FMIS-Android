@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/caozuo"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/huoqu_mysql"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/xieru_mysql"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/huoqu_pycharm"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </TextView>
+
+    </LinearLayout>
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/fragment_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="590dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_above="@id/nav_view"/>-->
+<!--<fragment-->
+<!--    android:id="@+id/fragment"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="590dp">-->
+
+<!--</fragment>-->
+    
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@+id/caozuo"
+        android:id="@+id/fra_containner"
+        android:layout_width="match_parent"
+        android:layout_height="590dp">
+
+    </FrameLayout>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:theme="@style/footButton"-->
+<!--        app:itemTextColor="@color/gray_4"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:menu="@menu/bottom_nav_menu"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/i_shouye"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shouye"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/i_julei">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/i_julei"
+            app:layout_constraintLeft_toLeftOf="@id/i_julei"
+            app:layout_constraintRight_toRightOf="@id/i_julei"
+            android:text="聚类"
+            android:textSize="12dp"
+            android:textColor="@color/gray_3"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/i_julei"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/julei"
+            app:layout_constraintTop_toTopOf="@id/i_shouye"
+            app:layout_constraintLeft_toRightOf="@id/i_shouye"
+            app:layout_constraintRight_toLeftOf="@id/i_guanlianguize">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/i_shouye"
+            app:layout_constraintLeft_toLeftOf="@id/i_shouye"
+            app:layout_constraintRight_toRightOf="@id/i_shouye"
+            android:text="首页"
+            android:textSize="12dp"
+            android:textColor="@color/gray_3"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/i_guanlianguize"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/guanlian"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/i_yuce"
+            app:layout_constraintRight_toLeftOf="@id/i_julei">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/i_guanlianguize"
+            app:layout_constraintLeft_toLeftOf="@id/i_guanlianguize"
+            app:layout_constraintRight_toRightOf="@id/i_guanlianguize"
+            android:text="关联规则"
+            android:textSize="12dp"
+            android:textColor="@color/gray_3"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/i_yuce"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/yuce"
+            app:layout_constraintTop_toTopOf="@id/i_shouye"
+            app:layout_constraintLeft_toRightOf="@id/i_guanlianguize"
+            app:layout_constraintRight_toRightOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/i_yuce"
+            app:layout_constraintLeft_toLeftOf="@id/i_yuce"
+            app:layout_constraintRight_toRightOf="@id/i_yuce"
+            android:text="预测"
+            android:textSize="12dp"
+            android:textColor="@color/gray_3"
+            >
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
